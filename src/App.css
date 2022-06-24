@@ -1,0 +1,135 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #333333;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > div {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46.88px; 
+}
+
+main {
+  box-sizing: border-box;
+  padding: 62px max(5px, calc(calc(100vw - calc(300px * 3 + 25px * 2))/2));
+}
+
+footer {
+  height: 63px;
+  background-color: #DDDDDD;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+footer > p {
+  font-weight: 18px;
+  line-height: 18px;
+  height: 18px;
+}
+
+footer > p:hover {
+  text-decoration: underline;
+}
+
+main > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  width: calc(300px * 3 + 25px * 2);
+  height: calc(300px * 3 + 25px * 2)
+}
+
+.Job {
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Job:not(:nth-child(1+3n)) {
+  margin-left: 25px;
+}
+
+.Red {
+  border: 10px solid #E30413;
+}
+
+.Green {
+  border: 10px solid #3EA535;
+}
+
+.Yellow {
+  border: 10px solid #FFEE00;
+}
+
+.Blue {
+  border: 10px solid #039FE3;
+}
+
+.Beige {
+  border: 10px solid #F8C5AF;
+}
+
+.Job > div:nth-child(1) {
+  height: calc(185*100%/300);
+  font-size: 30px;
+  line-height: 35.16px;
+  color: #000000;
+}
+
+.Job > div:nth-child(2) {
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #000000;
+}
+
+.Job > div:hover {
+  text-decoration: underline;
+}
+
+.Bold {
+  font-weight: bold;
+}
+
+@media (max-width: calc(300px * 3 + 25px * 2 + 5px * 2)){
+  main {
+    padding: 62px max(5px, calc(calc(100vw - calc(300px * 2 + 25px * 1))/2));
+  }
+  main > div {
+    width: calc(300px * 2 + 25px * 1);
+    height: calc(300px * 5 + 25px * 4)
+  }
+  .Job:not(:nth-child(1+3n)) {
+    margin-left: 0px;
+  }
+  .Job:not(:nth-child(1+2n)) {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: calc(300px * 2 + 25px * 1 + 5px * 2)){
+  main {
+    padding: 62px max(5px, calc(calc(100vw - calc(300px * 1 + 25px * 0))/2));
+  }
+  main > div {
+    width: calc(300px * 1 + 25px * 0);
+    height: calc(300px * 9 + 25px * 8)
+  }
+  .Job:not(:nth-child(1+3n)) {
+    margin-left: 0px;
+  }
+}
